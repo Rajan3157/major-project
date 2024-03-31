@@ -1,0 +1,19 @@
+// for ESP8266 Microcontroller
+#define rainAnalog A0
+#define rainDigital D6
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(rainDigital,INPUT);
+  pinMode(rainAnalog,INPUT);
+  
+}
+void loop() {
+  int rainAV = analogRead(rainAnalog);
+  int rainDV = digitalRead(rainDigital);
+  
+  Serial.print(rainAnalogVal);
+  Serial.print("\t");
+  Serial.println(rainDigitalVal);
+  delay(200);
+}
